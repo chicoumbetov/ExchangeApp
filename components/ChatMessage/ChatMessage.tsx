@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Message } from '../../types';
 import moment from "moment";
-import styles from './style'
+import styles from './style';
 
 export type ChatMessageProps = {
     message: Message;

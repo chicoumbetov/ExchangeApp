@@ -1,6 +1,6 @@
 export type RootStackParamList = {
   Root: undefined;
-  ChatRoom: undefined;
+  ChatRoom: { name: string };
   NotFound: undefined;
 };
 

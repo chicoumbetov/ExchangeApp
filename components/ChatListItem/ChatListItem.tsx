@@ -19,6 +19,7 @@ const ChatListItem = (props: ChatListItemProps) => {
     const { chatRoom } = props;
     const navigation = useNavigation();
     const user = chatRoom.users[1];
+    
     const onClick = () => {
         //this is how we send to open specific user
         navigation.navigate('ChatRoom', {
@@ -26,7 +27,6 @@ const ChatListItem = (props: ChatListItemProps) => {
             name: user.name,
         });
         //console.warn( `Clicked on ${user.name}`)
-
     }
 
     return (

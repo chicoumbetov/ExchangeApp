@@ -7,7 +7,7 @@ import Colors from '../constants/Colors';
 import { View } from '../components/Themed';
 import { 
   Octicons, MaterialCommunityIcons, 
-  //MaterialIcons, FontAwesome5 
+  MaterialIcons, FontAwesome5 
 } from '@expo/vector-icons';
 
 import { RootStackParamList } from '../types';
@@ -66,7 +66,26 @@ function RootNavigator() {
           )
         }}
       />
-      <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ title: 'Chat Room' }} />
+      <Stack.Screen 
+        name="ChatRoom" 
+        component={ChatRoomScreen} 
+        //display title at the top when clicked on dialog with specific user
+        options={({ route }) => ({
+          title: route.params.name,
+          headerRight: () => (
+            <View style={{
+              flexDirection: 'row', 
+              backgroundColor: Colors.light.tint , 
+              width: 100, justifyContent: 'space-between',
+              marginRight: 30,
+            }}>
+              <FontAwesome5 name="video" size={15} color={'white'} style={{ margin: 5 }}/>
+              <MaterialIcons name="call" size={15} color={'white'} style={{ margin: 5 }}/>
+              <MaterialCommunityIcons name="dots-vertical" size={22} color={'white'} style={{ margin: 2 }}/>
+            </View>
+          )
+      })}
+      />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
