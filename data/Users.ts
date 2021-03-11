@@ -1,6 +1,6 @@
 export default [{
     id: 'u1',
-    name: 'Vadim',
+    name: 'Shoco',
     imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
     status: "Hello there, how are you"
   }, {
@@ -17,7 +17,7 @@ export default [{
     imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.png',
   }, {
     id: 'u5',
-    name: 'Vlad',
+    name: 'Delphin',
     imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
   }, {
     id: 'u6',

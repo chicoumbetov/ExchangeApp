@@ -1,13 +1,14 @@
 export type RootStackParamList = {
   Root: undefined;
   ChatRoom: { name: string };
+  Contacts: { user: string };
   NotFound: undefined;
 };
 
 export type MainTabParamList = {
   Camera: undefined;
   Chats: undefined;
-  Status: undefined;
+  Status: { status: string, user: string } ;
   Calls: undefined;
 };
 
@@ -23,6 +24,7 @@ export type User = {
   id: string;
   name: string;
   imageUri: string;
+  status: string;
 }
 
 export type Message = {
