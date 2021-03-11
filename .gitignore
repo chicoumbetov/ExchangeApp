@@ -11,3 +11,5 @@ web-build/
 
 # macOS
 .DS_Store
+
+#yarn add @react-navigation/material-top-tabs react-native-tab-view react-native-pager-view

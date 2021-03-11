@@ -4,6 +4,11 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 //import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Colors from '../constants/Colors';
+import { View } from '../components/Themed';
+import { 
+  Octicons, MaterialCommunityIcons, 
+  //MaterialIcons, FontAwesome5 
+} from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
@@ -30,7 +35,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{
       headerStyle: {
-          backgroundColor: Colors.light.tint,
+        backgroundColor: Colors.light.tint,
       },
       headerTintColor: Colors.light.background,
       headerTitleAlign: 'left',
@@ -38,7 +43,24 @@ function RootNavigator() {
         fontWeight: 'bold',
       }
     }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen
+        name="Root"
+        component={BottomTabNavigator}
+        options={{
+          title: 'ExchangeApp',
+          headerRight: () => (
+            <View style={{
+              flexDirection: 'row',
+              backgroundColor: Colors.light.tint,
+              width: 60, justifyContent: 'space-between',
+              marginRight: 10
+            }}>
+              <Octicons name="search" size={22} color={'white'} />
+              <MaterialCommunityIcons name="dots-vertical" size={22} color={'white'} />
+            </View>
+          )
+        }}
+      />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
