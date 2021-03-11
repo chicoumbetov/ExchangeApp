@@ -26,10 +26,12 @@ const styles = StyleSheet.create({
     lastMessage: {
         fontSize: 16,
         color: 'grey',
+        width: 180,
     },
     time: {
         fontSize: 16,
-        color: 'grey'
+        color: 'grey',
+        height: 20,
     }
 });
 
