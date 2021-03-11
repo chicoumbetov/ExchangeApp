@@ -12,7 +12,7 @@ import {
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 // If you are not familiar with React Navigation, we recommend going through the
@@ -45,7 +45,7 @@ function RootNavigator() {
     }}>
       <Stack.Screen
         name="Root"
-        component={BottomTabNavigator}
+        component={MainTabNavigator}
         options={{
           title: 'ExchangeApp',
           headerRight: () => (
