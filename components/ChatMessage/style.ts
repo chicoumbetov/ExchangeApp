@@ -3,7 +3,7 @@ import Colors from '../../constants/Colors';
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        padding: 9,
     },
     messageBox: {
         borderRadius: 5,

@@ -14,6 +14,7 @@ const ChatMessage = (props: ChatMessageProps) => {
     const isMyMessage = () => {
         return message.user.id === 'u1';
     }
+    
     return (
         <View style={styles.container}>
             <View style={[
