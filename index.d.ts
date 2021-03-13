@@ -1,6 +1,7 @@
 declare module '*.png';
 declare module '*.jpg';
 declare module 'react';
+declare module 'react-native';
 declare module 'aws-amplify';
 declare module './src/aws-exports';
 declare module 'aws-amplify-react-native';

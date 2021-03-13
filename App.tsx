@@ -26,8 +26,10 @@ Auth.configure(awsconfig);
 import { withAuthenticator } from 'aws-amplify-react-native';
 
 const randomImages = [
-  'https://hievmobile.com/wp-content/uploads/avatar-among-us-2.jp',
-  'https://hievmobile.com/wp-content/uploads/avatar-among-us-3.jp',
+  'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+  'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg',
+  'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg',
+  'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
 ]
 
 const App = () => {
@@ -68,7 +70,7 @@ const App = () => {
           status: 'Hey, I am using ExchangeApp',
         }
 
-        //console.log(newUser);
+        console.log(newUser);
 
         //if there is no user is DB with the id, then create one
         await API.graphql(
