@@ -8,12 +8,17 @@ import Navigation from './navigation';
 
 //amplify
 import Amplify from 'aws-amplify';
+import {Auth} from '@aws-amplify/auth'
 //const config = require('./src/aws-exports').default;
-import config from './src/aws-exports';
-Amplify.configure(config)
+import awsconfig from './src/aws-exports';
+Amplify.configure(awsconfig)
 
+// >>New - Configuring Auth Module
+Auth.configure(awsconfig);
 
-export default function App() {
+import { withAuthenticator } from 'aws-amplify-react-native';
+
+const App = () => {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
@@ -28,3 +33,5 @@ export default function App() {
     );
   }
 }
+
+export default withAuthenticator(App);

@@ -1,3 +1,9 @@
 declare module '*.png';
 declare module '*.jpg';
-declare module '.aws-exports';
+declare module 'react';
+declare module 'aws-amplify';
+declare module './src/aws-exports';
+declare module 'aws-amplify-react-native';
+declare module 'expo-status-bar';
+declare module 'react-native-safe-area-context';
+declare module '@aws-amplify/auth';
